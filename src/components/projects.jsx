@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { BiLink, BiLogoHtml5, BiLogoJavascript, BiRightArrowAlt } from "react-icons/bi";
+import { BiLink, BiLogoHtml5, BiLogoJavascript, BiLogoNodejs, BiLogoPostgresql, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript, BiRightArrowAlt } from "react-icons/bi";
 import { BiLogoCss3 } from "react-icons/bi";
+import { DiMysql } from "react-icons/di";
+
 
 
 const Projects = () => {
@@ -42,6 +44,22 @@ const Projects = () => {
 
             link: "https://gt20260404-landingpage-fashion.onrender.com/" 
         },
+        {
+            image:"./finControl.png",
+            titulo: "FinControl - Controle Financeiro Completo",
+            descricao: "Sistema de controle financeiro full stack desenvolvido com React, Next.js, Node.js, TypeScript, JavaScript e Tailwind CSS. O projeto conta com uma interface intuitiva para gerenciamento de receitas e despesas, visualização de dados em gráficos e acompanhamento financeiro. O backend utiliza Node.js e Express para a construção da API, com TypeORM para gerenciamento do banco de dados, autenticação com JWT, criptografia de senhas com bcryptjs e envio de e-mails com Nodemailer. Também foram utilizadas tecnologias e bibliotecas como MySQL2, PostgreSQL (pg), Yup, Axios, React Hook Form e Recharts, proporcionando validação de dados, comunicação entre frontend e backend e uma experiência completa de gestão financeira.",
+            
+            tecnologias: [
+                {icon: DiMysql, nome: "Mysql"}, 
+                {icon: BiLogoTailwindCss , nome: "CSS" },
+                {icon: BiLogoReact , nome:"React"},
+                {icon: BiLogoNodejs , nome:"javaScript"},
+                {icon: BiLogoTypescript, nome:"Typescript"},
+                {icon: BiLogoPostgresql, nome:"Postgresql"},
+            ],
+
+            link: "https://gt20260404-landingpage-fashion.onrender.com/" 
+        }
 
 
     ])
@@ -75,7 +93,7 @@ const Projects = () => {
                                         <p className="text-green-500 text-2xl mb-3">// Tecnologias </p>
                                     </div>
 
-                                    <div className="flex gap-5 mb-5">
+                                    <div className="grid grid-cols-4 gap-5 mb-5">
                                         {
                                             c.tecnologias.map((tecnologia, index) => {
                                                 const Icon = tecnologia.icon
